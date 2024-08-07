@@ -60,3 +60,10 @@ function naimur_customizar_register($wp_customize){
 }
 
 add_action('customize_register', 'naimur_customizar_register');
+
+
+
+// WP MENU REGISTAR
+
+
+register_nav_menu('main_menu',__('Main Menu','naimurTheme') );
