@@ -26,3 +26,22 @@ function naim_css_js_file_calling(){
 }
 // Calling the files 
 add_action('wp_enqueue_scripts','naim_css_js_file_calling');
+
+
+
+// Theme Functions
+
+function naim_customizar_registar($wp_customize){
+   $wp_customize->add_section('naimur_header_area',array(
+      'title' =>__('Header Area','naimurTheme'),
+      'description' => 'if you intersted to update your logo you can'
+   ));
+   $wp_customize->add_setting('naimur-logo',array(
+     'default'=>get_bloginfo('template-directory').'./img/logo.png',
+
+   ));
+
+   
+}
+
+add_action('customize_registar','naim_customizar_registar');
