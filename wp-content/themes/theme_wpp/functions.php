@@ -31,17 +31,24 @@ add_action('wp_enqueue_scripts','naim_css_js_file_calling');
 
 // Theme Functions
 
-function naim_customizar_registar($wp_customize){
-   $wp_customize->add_section('naimur_header_area',array(
-      'title' =>__('Header Area','naimurTheme'),
-      'description' => 'if you intersted to update your logo you can'
-   ));
-   $wp_customize->add_setting('naimur-logo',array(
-     'default'=>get_bloginfo('template-directory').'./img/logo.png',
+//Theme Function
+function naimur_customizar_register($wp_customize){
+  $wp_customize->add_section('naimur_header_area', array(
+    'title' =>__('Header Area', 'naimurTheme'),
+    'description' => 'If you interested to update your header area, you can do it here.'
+  ));
 
-   ));
+  $wp_customize->add_setting('naimur_logo', array(
+    'default' => get_bloginfo('template_directory') . '/img/logo.png',
+  ));
 
-   
+  $wp_customize-> add_control(new WP_Customize_Image_Control($wp_customize, 'naimur_logo', array(
+    'label' => 'Logo Upload',
+    'description' => 'If you interested to change or update your logo you can do it.',
+    'setting' => 'naimur_logo',
+    'section' => 'naimur_header_area',
+  ) ));
+
 }
 
-add_action('customize_registar','naim_customizar_registar');
+add_action('customize_register', 'naimur_customizar_register');
