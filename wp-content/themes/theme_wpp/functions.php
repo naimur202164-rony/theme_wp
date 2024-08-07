@@ -29,6 +29,14 @@ add_action('wp_enqueue_scripts','naim_css_js_file_calling');
 
 
 
+// Google font enqueue
+
+function naimur_add_google_fonts(){
+   wp_enqueue_style('naimur_google_fonts','https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Oswald&display=swap',false);
+}
+add_action('wp_enqueue_scripts', 'naimur_add_google_fonts');
+
+
 // Theme Functions
 
 //Theme Function
