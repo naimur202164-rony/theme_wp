@@ -7,8 +7,7 @@
   <?php wp_head();?>
 </head>
 <body <?php body_class() ?> >
-  
-
+  <!-- The Content Will Be Published -->
 <?php  wp_footer() ?>
 </body>
 </html>
