@@ -60,9 +60,13 @@ function naimur_customizar_register($wp_customize){
 
 
 // Menu Position Option
-  $wp_customize->add_section('ali_menu_option', array(
-    'title' => __('Menu Position Option', 'alihossain'),
+  $wp_customize->add_section('naimur_menu_option', array(
+    'title' => __('Menu Position Option', 'naimurTheme'),
     'description' => 'If you interested to change your menu position you can do it.'
+  ));
+
+  $wp_customize->add_section('naimur_menu_position', array(
+    'default' => 'right_menu'
   ));
 }
 
