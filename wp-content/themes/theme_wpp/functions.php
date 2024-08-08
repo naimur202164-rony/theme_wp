@@ -41,6 +41,7 @@ add_action('wp_enqueue_scripts', 'naimur_add_google_fonts');
 
 //Theme Function
 function naimur_customizar_register($wp_customize){
+  // Header Area Functions
   $wp_customize->add_section('naimur_header_area', array(
     'title' =>__('Header Area', 'naimurTheme'),
     'description' => 'If you interested to update your header area, you can do it here.'
@@ -57,13 +58,23 @@ function naimur_customizar_register($wp_customize){
     'section' => 'naimur_header_area',
   ) ));
 
+
+// Menu Position Option
+  $wp_customize->add_section('ali_menu_option', array(
+    'title' => __('Menu Position Option', 'alihossain'),
+    'description' => 'If you interested to change your menu position you can do it.'
+  ));
 }
+
+
+
+
+
+
+
 
 add_action('customize_register', 'naimur_customizar_register');
 
 
-
 // WP MENU REGISTAR
-
-
 register_nav_menu('main_menu',__('Main Menu','naimurTheme') );
