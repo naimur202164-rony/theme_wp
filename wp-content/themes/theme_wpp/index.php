@@ -8,7 +8,7 @@
   <?php wp_head(); ?>
 </head>
 <body <?php body_class() ?>>
-  <div id="header_area">
+  <div id="header_area" class="<?php echo get_theme_mod('naimur_menu_position'); ?>">
     <div class="container">
       <div class="row">
         <div class="col-md-3"><a href=""><img src="<?php echo get_theme_mod('naimur_logo') ?>" alt=""></a></div>

@@ -58,7 +58,6 @@ function naimur_customizar_register($wp_customize){
     'section' => 'naimur_header_area',
   ) ));
 
-
  // Menu Position Option
   $wp_customize->add_section('naimur_menu_option', array(
     'title' => __('Menu Position Option', 'naimurTheme'),
@@ -92,7 +91,6 @@ function naimur_customizar_register($wp_customize){
 
 
 add_action('customize_register', 'naimur_customizar_register');
-
 
 // WP MENU REGISTAR
 register_nav_menu('main_menu',__('Main Menu','naimurTheme') );
